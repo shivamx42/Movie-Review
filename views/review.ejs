@@ -1,0 +1,61 @@
+<%- include("partials/header") -%>
+
+
+
+    <p style="margin: 40px">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus at, consequuntur ut explicabo provident incidunt id tempora quod placeat? Deleniti ea accusantium quibusdam magnam ex autem, illo velit vero dignissimos harum ratione distinctio itaque officiis, laborum explicabo! Tenetur fugiat explicabo asperiores quas animi suscipit harum deleniti officia veniam placeat a dignissimos tempore inventore velit odit ex, eius nulla nemo magni? Repellat ducimus quo modi autem eos itaque, quod excepturi incidunt corporis eum iste, mollitia totam ut at! Est, voluptatum! Distinctio quas eum id temporibus ipsum. Adipisci beatae doloremque, velit reprehenderit error ad cum sed, sit illum voluptates repellendus alias molestias!
+
+    </p>
+
+
+
+    <form action="/review" method="post">
+
+
+        <div class="review-container">
+            
+            <span class="title-span"> * </span>
+            <div class="input-css input-anim1">
+               
+                <h3>Movie Title</h3> 
+                <input class="anim1-shadow" type="text" name="newTitle" autocomplete="off" title="MandatoryField" required>
+
+            </div>
+
+
+            <span class="textarea-span"> * </span>
+            <div class="input-css input-anim2">
+                
+                <h3>Write your Review</h3> 
+                <textarea class="anim2-shadow" name="newReview" placeholder="Add a minimum of 250 characters..." minlength="250" title="Mandatory Field" required></textarea>
+            </div>
+
+
+
+
+
+
+            <span class="name-span"> * </span>
+            <div class="input-css input-anim3">
+                
+                <h3>Write your name</h3> 
+                
+                <input class="anim3-shadow" type="text" name="publishedBy" autocomplete="off" maxlength="32" title="Mandatory Field" required>
+            </div>
+
+
+
+            <button type="submit" class="button btn-animation">PUBLISH</button>
+
+        </div>
+
+        
+
+    </form>
+
+
+
+
+<%- include("partials/footer") -%>
+
+

@@ -1,0 +1,53 @@
+
+
+<%- include("partials/header") -%>
+
+<p style="margin: 40px 20px;"> <%= homeContent %> </p>
+
+
+<p class="to-review">Write your reviews    <a href="/review" class="to-review-link">here!</a> </p> 
+
+<% if(newMovies.length === 0){ %>
+    <h1 style="margin: 40px 20px; text-align: center;">Movies will be displayed here:</h1>
+<% } else{ %>
+
+    <div class="movie-list-container">
+        <div class="movie-list">
+            <div class="to-animate">
+
+                <div class="to-right">
+                    <h1 style="font-family: 'Merriweather', serif;">Movies</h1>
+                </div>
+
+                <div class="to-left">
+                    <h1 style="font-family: 'Merriweather', serif;"> List <span>:</span></h1> 
+                </div>
+            </div>
+            <div class="newContent">
+                <% newMovies.forEach(function(movie){ %>
+                    
+
+                        <div>
+                            <p class="to-animate-content movie-names">
+
+                                
+                                    <a href="/read/<%=encodeURIComponent(movie.title)%>" title="Click here to see all reviews"  > <%= movie.title %> </a>
+                                
+                                
+                            </p>
+                        </div>
+            
+                    <% }); %>
+        </div>
+    </div>
+
+    </div>
+
+    
+<% } %>
+
+
+
+
+<%- include("partials/footer") -%>
+

@@ -1,0 +1,27 @@
+body{
+    background-color: #f31850;
+    
+    
+
+}
+
+h1{
+    text-align: center;
+    margin: 150px;
+}
+
+p{
+    text-align: center;
+    margin: 50px;
+    font-size: 1.5rem;
+}
+
+.failed-link{
+    text-decoration: none;
+    color: rgb(6, 6, 170);
+}
+
+.failed-link:hover{
+    color: rgb(3, 3, 101);
+    color: rgb(3, 3, 118);
+}
