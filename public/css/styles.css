@@ -12,7 +12,6 @@ body{
     
     
     min-height: 100vh;
-   
     display: flex;  
     flex-direction: column;
     
@@ -199,9 +198,10 @@ footer p{
     border: 2px solid black;
     border-radius: 6px;
     
-    font-family: sans-serif;
-    font-size: 18px;
-    font-weight: 600;
+    /* font-family: sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
     color: rgb(21, 21, 21);
     
     
@@ -211,14 +211,13 @@ footer p{
     transform: scale(1.02);
     font-size: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-    color: black;
+    
     
 }
 
 .input-css input:focus{
     outline: none;
-    font-size: 20px;
-    color: black;
+    
 }
 
 .input-css textarea{
@@ -227,9 +226,9 @@ footer p{
     margin: 5px 0;
     border: 2px solid black;
     border-radius: 6px;
-    font-size: 18px;
-    font-family: sans-serif;
-    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     color: rgb(21, 21, 21);
 }
 
@@ -237,23 +236,21 @@ footer p{
 .input-css textarea:hover{
     transform: scale(1.02);
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
-    color: black;
-    font-size: 20px;
     
 } 
 
 .input-css textarea:focus{
     outline: none;
-    color: black;
-    font-size: 20px;
+    
 }
 
 
 .input-css textarea::placeholder{
     font-weight: bold;
     font-size: 1.5rem;
-    padding:10px 0 0 10px;
-    font-family: sans-serif;
+    padding: 10px 0 0 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .input-css-image{
@@ -396,7 +393,7 @@ img{
     
     margin-top: 30px;
     height: 300px;
-    width: 300px;
+    width: 250px;
     filter: grayscale(100%);
     transition-duration: 1s;
 
@@ -559,22 +556,19 @@ img:hover{
     
 }
 
-.movie-names{
+.movie-names a{
     margin: 20px;
     font-size: 1.5rem;
     font-weight: bold;
-    
-    
+    display: inline-block;
+    transition-duration: 1.5s;
 }
 
 
 .movie-names a:hover{
-      
-    display:inline-block;
-    transition-duration: 1s;
+    
     transform: scale(1.6);
     color: #f31850;
-     
     
 }
 
