@@ -2,7 +2,7 @@
 
 <%- include("partials/header") -%>
 
-<p style="margin: 40px 20px;"> 
+<p style="margin: 40px 20px; font-size: 20px;"> 
     Welcome to <b>MovieMagic</b>, a platform where every movie enthusiast is a critic. I've built this space for passionate film lovers like you. Here, there are no barriers – anyone can share their thoughts on any movie, whether it's a recent blockbuster or a timeless classic.
 
     It's quick, easy, and hassle-free. Our goal is to ensure that every voice is heard, so whether you're a seasoned cinephile or just a casual viewer, your perspective matters.
@@ -20,7 +20,7 @@
 <% } else{ %>
 
     <div class="movie-list-container">
-        <div class="movie-list">
+        <div class="movie-list" >
             <div class="to-animate">
 
                 <div class="to-right">
@@ -28,18 +28,23 @@
                 </div>
 
                 <div class="to-left">
-                    <h1 style="font-family: 'Merriweather', serif;"> List <span>:</span></h1> 
+                    <h1 style="font-family: 'Merriweather', serif;">List </h1> 
                 </div>
+
+                
             </div>
+
+            <hr>
+
             <div class="newContent">
                 <% newMovies.forEach(function(movie){ %>
                     
 
                         <div>
-                            <p class="to-animate-content movie-names">
+                            <p class="hidden-name movie-names">
 
                                 
-                                    <a href="/read/<%=encodeURIComponent(movie.title)%>" title="Click here to see all reviews"  > <%= movie.title %> </a>
+                                    <a href="/read/<%=encodeURIComponent(movie.title)%>" title="Click here to see all reviews"> <%= movie.title %> </a>
                                 
                                 
                             </p>
