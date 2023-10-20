@@ -2,8 +2,8 @@
 
 <%- include("partials/header") -%>
 
-<p style="margin: 40px 20px; font-size: 20px;"> 
-    Welcome to <b>MovieMagic</b>, a platform where every movie enthusiast is a critic. I've built this space for passionate film lovers like you. Here, there are no barriers – anyone can share their thoughts on any movie, whether it's a recent blockbuster or a timeless classic.
+<p style="margin: 40px 20px 20px 40px; font-size: 15px;"> 
+    Welcome to <b>MovieMagic</b>, a platform where every movie enthusiast is a critic. I've built this space for passionate film lovers like you. Here, there are no barriers, anyone can share their thoughts on any movie, whether it's a recent blockbuster or a timeless classic.
 
     It's quick, easy, and hassle-free. Our goal is to ensure that every voice is heard, so whether you're a seasoned cinephile or just a casual viewer, your perspective matters.
 
@@ -19,7 +19,7 @@
     <h1 style="margin: 40px 20px; text-align: center;">Movies will be displayed here:</h1>
 <% } else{ %>
 
-    <div class="movie-list-container">
+    <div id="movie-list-container">
         <div class="movie-list" >
             <div class="to-animate">
 
@@ -37,6 +37,8 @@
             <hr>
 
             <div class="newContent">
+
+                <p href="" class="toScrollMovie"></p>
                 <% newMovies.forEach(function(movie){ %>
                     
 
@@ -44,13 +46,17 @@
                             <p class="hidden-name movie-names">
 
                                 
-                                    <a href="/read/<%=encodeURIComponent(movie.title)%>" title="Click here to see all reviews"> <%= movie.title %> </a>
+                                    <a href="/read/<%=encodeURIComponent(movie.title)%>" title="Click to see all reviews"> <%= movie.title %> </a>
                                 
                                 
                             </p>
                         </div>
             
                     <% }); %>
+        </div>
+
+        <div id="to-scroll-id">
+            <ion-icon name="arrow-up-outline" class="arrowTopMovie"></ion-icon>
         </div>
     </div>
 

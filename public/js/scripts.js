@@ -5,7 +5,7 @@ const observer= new IntersectionObserver((entries)=>{
         if(entry.isIntersecting){
             entry.target.classList.add('read-animation');
         } else{
-            entry.target.classList.remove('read-animation');
+            // entry.target.classList.remove('read-animation');
         }
     });
 });
@@ -27,26 +27,27 @@ const nameObserver= new IntersectionObserver((entries)=>{
 const hiddenNames= document.querySelectorAll('.hidden-name');
 hiddenNames.forEach((el)=>nameObserver.observe(el));
 
+// go to top:
 
-const scrollTo=document.querySelector('.navbar');
+const scrollToTop=document.querySelector('.navbar');
 const scrollElement=document.querySelector('.arrowTop');
 
 const scrollFunction = ()=>{
-    scrollTo.scrollIntoView({behavior: "smooth"});
+    scrollToTop.scrollIntoView({behavior: "smooth"});
 }
 
 scrollElement.addEventListener("click",scrollFunction);
 
 
 
-// go to top:
+
 
 scrollId = document.getElementById("to-scroll-id");
 const arrowTop=document.querySelector('.arrowTop');
 
 const myScrollFunc = function () {
-    let y = window.scrollY;
-    if (y >=1000) {
+    let scrollTop=window.scrollY;
+    if (scrollTop>=1000){
         scrollId.className="scroll-container show";
         scrollId.style.display='inline';
 
@@ -72,3 +73,50 @@ const myScrollFunc = function () {
 
 window.addEventListener("scroll", myScrollFunc);
 
+
+const scrollToMovie=document.querySelector(".toScrollMovie");
+const scrollElementMovie=document.querySelector('.arrowTopMovie');
+const scrollFunctionMovie = ()=>{
+    scrollToMovie.scrollIntoView({behavior: "smooth"});
+}
+
+scrollElementMovie.addEventListener("click",scrollFunctionMovie);
+
+const arrowTopMovie=document.querySelector('.arrowTopMovie');
+
+const myDiv=document.getElementsByClassName('newContent'); 
+
+
+    for(let i=0;i<myDiv.length;i++){
+
+
+        myDiv[i].addEventListener('scroll',function() {
+
+        const scrollTopMovie=myDiv[i].scrollTop;
+        if (scrollTopMovie>=500) {
+            scrollId.className="scroll-container show";
+            scrollId.style.display='inline';
+
+
+        
+            arrowTopMovie.style.display='inline-block';
+
+            
+
+            setTimeout(function(){
+                arrowTopMovie.style.pointerEvents='auto';
+                arrowTopMovie.style.cursor='pointer';
+            }, 1000);
+
+
+        } else {
+            scrollId.className="scroll-container hide";
+            scrollId.style.display='none';
+
+            arrowTopMovie.style.display='none';
+            arrowTopMovie.style.pointerEvents='none';
+            arrowTopMovie.style.cursor='default';
+            
+        }
+    });
+};
